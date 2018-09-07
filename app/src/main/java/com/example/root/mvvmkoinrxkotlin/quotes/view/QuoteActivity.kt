@@ -20,7 +20,7 @@ class QuoteActivity : AppCompatActivity() {
     }
 
     private fun init() {
-        quoteViewModel.getObservableToastList().observe(this, Observer { quoteStatus ->
+        quoteViewModel.getObservableQuote().observe(this, Observer { quoteStatus ->
             when (quoteStatus) {
                 is QuoteStatus.Success -> {
                     toast(quoteStatus.data)

@@ -19,7 +19,7 @@ class QuotesViewModel(private val useCase: QuoteGetUseCase) : ViewModel() {
     lazy { MutableLiveData<QuoteStatus>() }
 
 
-    fun getObservableToastList(): MutableLiveData<QuoteStatus> {
+    fun getObservableQuote(): MutableLiveData<QuoteStatus> {
         return quote
     }
 
